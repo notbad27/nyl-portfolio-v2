@@ -1,0 +1,30 @@
+plugins = []
+functionsDirectory = "C:\\Users\\nb\\Desktop\\html-css-course\\nyl-ghl\\netlify\\functions"
+functionsDirectoryOrigin = "config-v1"
+headers = []
+redirects = []
+
+[functions]
+
+[functions."*"]
+
+[build]
+publish = "C:\\Users\\nb\\Desktop\\html-css-course\\nyl-ghl\\dist"
+publishOrigin = "config"
+commandOrigin = "ui"
+command = "npm run build"
+functions = "C:\\Users\\nb\\Desktop\\html-css-course\\nyl-ghl\\netlify\\functions"
+
+[build.environment]
+
+[build.processing]
+
+[build.processing.css]
+
+[build.processing.html]
+
+[build.processing.images]
+
+[build.processing.js]
+
+[build.services]
