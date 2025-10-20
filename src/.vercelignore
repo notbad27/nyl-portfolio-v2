@@ -1,0 +1,24 @@
+# Node dependencies
+node_modules
+npm-debug.log
+yarn-error.log
+
+# Local dev/build files
+.DS_Store
+.vscode
+.idea
+dist/
+.env
+.env.local
+
+# Cache folders
+*.cache
+.cache
+.git
+.gitignore
+
+# Test or backup files
+*.test.js
+*.test.jsx
+*.bak
+*.tmp
