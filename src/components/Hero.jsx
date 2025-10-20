@@ -4,47 +4,46 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="min-h-screen flex flex-col md:flex-row justify-center items-center px-6 md:px-24 text-center md:text-left gap-10"
+      className="min-h-screen flex flex-col md:flex-row justify-center items-end px-6 md:px-24 pt-[100px] pb-32 md:pb-40 gap-16"
     >
-      {/* ✅ Profile Image (CDN absolute URL) */}
-      <motion.img
-        src="https://cdn.jsdelivr.net/gh/notbad27/nyl-ghl-builds@latest/nyl-profile.jpg"
-        alt="Nyl Dagarag"
+      {/* 🧍‍♂️ Profile Image — radiant cyan glow */}
+      <motion.div
         initial={{ opacity: 0, x: -50 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.8 }}
-        className="w-[650px] h-[561px] object-cover rounded-full border-4 border-cyan-400 shadow-[0_0_30px_rgba(34,211,238,0.4)]"
-      />
+        className="flex justify-center w-full md:w-1/2 -mb-8"
+      >
+        <img
+          src="/nyl-profile.png"
+          alt="Nyl Dagarag"
+          className="w-[480px] sm:w-[550px] md:w-[600px] lg:w-[650px] h-auto object-contain animate-soft-glow transform -translate-y-8"
+        />
+      </motion.div>
 
-      {/* Text Section */}
-      <div>
-        <motion.h1
-          initial={{ opacity: 0, y: 40 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          className="text-5xl md:text-7xl font-bold tracking-tight bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-500 text-transparent bg-clip-text"
-        >
+      {/* 💬 Text Section */}
+      <motion.div
+        initial={{ opacity: 0, x: 50 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.8 }}
+        className="flex flex-col justify-end w-full md:w-1/2 text-center md:text-left"
+      >
+        <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-500 text-transparent bg-clip-text leading-tight">
           Hi, I’m Nyl — I build automation-driven web experiences.
-        </motion.h1>
+        </h1>
 
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.5, duration: 0.7 }}
-          className="mt-6 max-w-2xl text-lg text-gray-400"
-        >
+        <p className="mt-6 text-lg text-gray-400 max-w-xl leading-relaxed mx-auto md:mx-0">
           I specialize in Go High Level automation, modern funnels, and
           interactive web systems that connect design and conversion.
-        </motion.p>
+        </p>
 
         <motion.a
           href="#work"
           whileHover={{ scale: 1.05 }}
-          className="mt-10 inline-block bg-white text-neutral-900 px-6 py-3 rounded-md font-medium"
+          className="mt-10 inline-block bg-white text-neutral-900 px-6 py-3 rounded-md font-medium shadow-lg hover:shadow-cyan-400/30 transition-all duration-300 mx-auto md:mx-0"
         >
           View My Work
         </motion.a>
-      </div>
+      </motion.div>
     </section>
   );
 }

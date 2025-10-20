@@ -96,29 +96,44 @@ body,
   cursor: not-allowed;
 }
 
-/* 🌀 Infinite Skill Carousel — seamless, endless loop */
-@keyframes infinite-scroll {
+/* 🌀 Seamless Infinite Skill Carousel — clean radiant version */
+@keyframes scroll {
   0% {
     transform: translateX(0);
   }
   100% {
-    transform: translateX(-50%);
+    transform: translateX(-100%);
   }
 }
 
-.animate-infinite-scroll {
+.animate-scroll {
   display: flex;
-  animation: infinite-scroll 40s linear infinite;
+  animation: scroll 40s linear infinite;
+  width: 200%; /* both skill arrays fill the total width */
   will-change: transform;
 }
 
-/* Glowing pulse effect for logos */
+.animate-scroll > div {
+  flex-shrink: 0;
+  min-width: 130px;
+  transform: translateZ(0);
+}
+
+/* Carousel container stays fixed height and centered */
+#skills {
+  height: 330px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Radiant glowing pulse (no borders, no background) */
 @keyframes pulse-glow {
   0%, 100% {
-    filter: drop-shadow(0 0 6px rgba(34, 211, 238, 0.5));
+    filter: drop-shadow(0 0 10px rgba(34, 211, 238, 0.4));
   }
   50% {
-    filter: drop-shadow(0 0 12px rgba(34, 211, 238, 0.9));
+    filter: drop-shadow(0 0 25px rgba(34, 211, 238, 0.9));
   }
 }
 
@@ -126,7 +141,25 @@ body,
   animation: pulse-glow 2.5s ease-in-out infinite;
 }
 
-/* Ensure carousel section keeps fixed height */
-#skills {
-  height: 330px;
+/* 🌌 Soft, Slow Cyan Aura Glow for Profile Cutout */
+@keyframes soft-glow {
+  0%, 100% {
+    filter: drop-shadow(0 0 6px rgba(34, 211, 238, 0.35))
+            drop-shadow(0 0 12px rgba(34, 211, 238, 0.25));
+  }
+  50% {
+    filter: drop-shadow(0 0 20px rgba(34, 211, 238, 0.85))
+            drop-shadow(0 0 35px rgba(34, 211, 238, 0.65));
+  }
+}
+
+.animate-soft-glow {
+  animation: soft-glow 8s ease-in-out infinite;
+  transition: all 0.3s ease;
+}
+
+
+html, body {
+  scroll-behavior: smooth;
+  overscroll-behavior: contain;
 }
