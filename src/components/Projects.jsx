@@ -43,15 +43,15 @@ export default function Projects() {
   const projects = [
     {
       title: "Real Estate Automation Dashboard",
-      src: "https://cdn.jsdelivr.net/gh/notbad27/nyl-ghl-builds@latest/project1.jpg",
+      src: "/project1.jpg",
     },
     {
       title: "Lead Capture Funnel Design",
-      src: "https://cdn.jsdelivr.net/gh/notbad27/nyl-ghl-builds@latest/project2.jpg",
+      src: "/project2.jpg",
     },
     {
       title: "AI Appointment Booking System",
-      src: "https://cdn.jsdelivr.net/gh/notbad27/nyl-ghl-builds@latest/project3.jpg",
+      src: "/project3.jpg",
     },
   ];
 
